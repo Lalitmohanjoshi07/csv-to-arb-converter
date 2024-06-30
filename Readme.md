@@ -2,6 +2,7 @@ This is a python script to convert any translations csv file into arb file
 this is to reduce the time and effort of the developers on localization files
 
 here are steps how to use it(first ensure your system has python installed)
+first take clone of this repo on your system
 1. Prepare Your Excel Sheet:
 
       Ensure your Excel sheet has columns for the keys and each language. For example:
