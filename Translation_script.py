@@ -16,7 +16,8 @@ def csv_to_arb(csv_file_path, output_dir):
         string_count = 0
         for row in reader:
             string_count += 1
-            key = row['Name'].strip().capitalize()
+            name = row['Name'].strip()
+            key = name[:1].lower() + name[1:]
             for lang in translations.keys():
                 if key != "@@locale" and key.startswith('@'):
                     continue
