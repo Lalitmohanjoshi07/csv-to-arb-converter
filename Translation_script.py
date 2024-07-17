@@ -16,7 +16,7 @@ def csv_to_arb(csv_file_path, output_dir):
         string_count = 0
         for row in reader:
             string_count += 1
-            key = row['Name'][0].lower() + row['Name'][1:]
+            key = row['Name'].strip().capitalize()
             for lang in translations.keys():
                 if key != "@@locale" and key.startswith('@'):
                     continue
@@ -42,7 +42,7 @@ def csv_to_arb(csv_file_path, output_dir):
             print(f"Generated {arb_file_path}")
         print(string_count,'Srings generated')
 
-# usage replace input csv file path
+# usage replace input csv file path if your csv file has different name
 csv_file_path = './translations.csv'
 output_dir = './'
 csv_to_arb(csv_file_path, output_dir)

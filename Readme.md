@@ -7,11 +7,11 @@ first take clone of this repo on your system
 
       Ensure your Excel sheet has columns for the keys and each language. For example:
 
-          Key | English | Hungarian | Spanish | German | French
+          Name | English | Hungarian | Spanish | German | French
 
       Ensure that there should be the first row that tells the locale of each language with key '@@locale'. For example
 
-         Key      | English | Hungarian | Spanish | German | French
+         Name      | English | Hungarian | Spanish | German | French
 
          @@locale | en      | hu        | es      | de     | fr
 
