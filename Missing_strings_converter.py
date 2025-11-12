@@ -12,7 +12,7 @@ with open(untranslated_file_path, 'r', encoding='utf-8-sig') as f:
     untranslated_data = json.load(f)
 
 # Extract untranslated messages for 'es' locale
-untranslated_keys = untranslated_data.get("es", [])
+untranslated_keys = untranslated_data.get("cs", [])
 
 # Prepare data for the Excel sheet
 excel_data = []
@@ -26,11 +26,16 @@ for key in untranslated_keys:
         "Description": description
     })
 
-# Create a DataFrame
-df = pd.DataFrame(excel_data)
+# # Create a DataFrame
+# df = pd.DataFrame(excel_data)
 
-# Save to Excel
-output_excel_path = 'untranslated_messages.xlsx'
-df.to_excel(output_excel_path, index=False)
+print(excel_data)
+
+# # Save to Excel
+output_excel_path = 'untranslated_messages_created.txt'
+# df.to_excel(output_excel_path, index=False)
+with open(output_excel_path, "w") as file:
+    file.write(excel_data.__str__())
+
 
 print(f"Untranslated messages have been saved to {output_excel_path}")
